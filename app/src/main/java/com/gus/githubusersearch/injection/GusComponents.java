@@ -1,6 +1,7 @@
-package com.gus.githubusersearch.injection.application;
+package com.gus.githubusersearch.injection;
 
 import com.gus.githubusersearch.MainActivity;
+import com.gus.githubusersearch.injection.application.ApplicationComponent;
 import com.gus.githubusersearch.remote.UserRepositoryImpl;
 
 import javax.inject.Singleton;

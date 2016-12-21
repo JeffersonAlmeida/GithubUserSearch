@@ -1,4 +1,4 @@
-package com.gus.githubusersearch.injection.application.retrofit;
+package com.gus.githubusersearch.injection.retrofit;
 
 import com.gus.githubusersearch.remote.GithubUserRestService;
 

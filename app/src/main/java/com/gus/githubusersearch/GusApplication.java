@@ -2,7 +2,7 @@ package com.gus.githubusersearch;
 
 import android.app.Application;
 
-import com.gus.githubusersearch.injection.application.GusComponents;
+import com.gus.githubusersearch.injection.GusComponents;
 import com.gus.githubusersearch.injection.application.ApplicationComponent;
 import com.gus.githubusersearch.injection.application.ApplicationModule;
 import com.gus.githubusersearch.injection.application.DaggerGusComponents;
