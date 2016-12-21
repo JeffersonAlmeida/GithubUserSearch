@@ -10,6 +10,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        jackOptions {
+            enabled true
+        }
+
     }
     buildTypes {
         release {
@@ -29,6 +34,11 @@ android {
             applicationId "com.gus.githubusersearch.mock"
         }
         
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -79,7 +89,12 @@ dependencies {
         exclude module: 'recyclerview-v7'
         exclude module: 'support-annotations'
         exclude module: 'support-v4'
-
     }
+
+    compile 'org.projectlombok:lombok:1.16.10'
+
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.8'
+    compile 'com.google.dagger:dagger:2.8'
+    provided 'javax.annotation:jsr250-api:1.0'
 
 }
