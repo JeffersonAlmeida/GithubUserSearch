@@ -8,7 +8,7 @@ import javax.inject.Inject;
 public class MainActivity extends AppCompatActivity {
 
     @Inject
-    GusApplication application;
+    GusApplication gusApplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,14 +1,16 @@
 package com.gus.githubusersearch;
 
-import android.app.Application;
+import android.content.Context;
+import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 
+import com.gus.githubusersearch.injection.DaggerGusComponents;
 import com.gus.githubusersearch.injection.GusComponents;
 import com.gus.githubusersearch.injection.application.ApplicationComponent;
 import com.gus.githubusersearch.injection.application.ApplicationModule;
-import com.gus.githubusersearch.injection.application.DaggerGusComponents;
 import com.gus.githubusersearch.injection.application.DaggerApplicationComponent;
 
-public class GusApplication extends Application {
+public class GusApplication extends MultiDexApplication {
 
     private static final String TAG = GusApplication.class.getSimpleName();
 
@@ -21,6 +23,12 @@ public class GusApplication extends Application {
         super.onCreate();
         gusApplication = GusApplication.this;
         initDependencyInjection();
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 
     public static synchronized GusApplication get(){
